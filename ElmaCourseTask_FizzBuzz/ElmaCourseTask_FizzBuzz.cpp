@@ -3,18 +3,23 @@ using namespace std;
 
 int main()
 {
-  
-    for (int i;i<= 100;i++)
+    const int MAX_COUNTER_VALUE = 100;
+    for (int counter = 0; counter <= MAX_COUNTER_VALUE; counter++)
     {
-        if (i%3 == 0) {
+        if (counter % 3 == 0) {
             cout << "Fizz";
         }
-        if(i%5 == 0) {
+        else if (counter % 5 == 0) {
             cout << "Buzz";
         }
-        if (i % 15 == 0) {
+        else if (counter % 15 == 0) {
             cout << "FizzBuzz";
         }
-        cout << i;
+        else cout << counter;
+
+        cout << endl;
     }
+
+    cin.get();
+}
 
